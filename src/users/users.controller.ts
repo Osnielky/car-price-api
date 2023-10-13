@@ -23,7 +23,7 @@ export class UsersController {
     return this.userService.findOne(parseInt(id));
   }
   @Get()
-  findAll(@Query() email: string) {
+  findAll(@Query('email') email: string) {
     console.log(email);
     
     return this.userService.find(email);
